@@ -23,29 +23,7 @@
  *     }
  * }
  */
-class Solution {
-//     public boolean isSubPath(ListNode head, TreeNode root) {
-        
-//         if(root == null) return false;
-//         if(head == null) return true;
-        
-//         boolean ans = false;
-//         if(root.val == head.val){
-//             ans = findpath(head.next, root.left) || findpath(head.next, root.right);
-//         }
-//         return ans || isSubPath(head, root.left) || isSubPath(head, root.right);
-//     }
-    
-//     public static boolean findpath(ListNode head, TreeNode root){
-//         if(root == null) return false;
-//         if(head == null) return true;
-        
-//         if(head.val == root.val){
-//             return findpath(head.next, root.left) || findpath(head.next, root.right);
-//         } 
-//         return false;
-//     }
-    
+class Solution {        
     public boolean isSubPath(ListNode head, TreeNode root) {
         if (head == null) return true;
         if (root == null) return false;
@@ -55,6 +33,5 @@ class Solution {
         if (head == null) return true;
         if (root == null) return false;
         return head.val == root.val && (dfs(head.next, root.left) || dfs(head.next, root.right));
-    }
-    
+    } 
 }
